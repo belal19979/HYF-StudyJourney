@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --sections-pd--: 50px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #fbfbfb;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  color: #4f4f4f;
+}
+header .nav ul {
+  display: flex;
+}
+header .nav li a {
+  display: block;
+  padding-left: 20px;
+  color: #757575;
+  transition: 0.1s ease-in;
+}
+header .nav li a:hover {
+  color: #4f4f4f;
+  font-weight: bold;
+}
+
+.introduction {
+  position: relative;
+  height: 500px;
+  margin-top: var(--sections-pd--);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #757575;
+  background-image: url('https://cdn.pixabay.com/photo/2020/06/15/01/56/landscape-5300000_960_720.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 4px 12px 0px rgb(0 0 0 / 20%),
+    0px 2px 4px 1px rgb(0 0 0 / 60%);
+  z-index: 2; /* if I removed this the transparent layout dissappear even its z-index =-1 why?*/
+}
+
+.introduction::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.introduction .image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 8px solid #4f4f4f;
+}
+.introduction .image img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.introduction .name {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+.introduction .about-p {
+  font-size: 20px;
+  color: white;
+}
+.introduction .icons {
+}
+.introduction .icons a {
+  color: #efeeeec2;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/**************************************/
+
+.about {
+  margin-top: var(--sections-pd--);
+  margin-bottom: var(--sections-pd--);
+  padding: 40px;
+  display: flex;
+
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0px 4px 12px 0px rgb(0 0 0 / 20%),
+    0px 2px 4px 1px rgb(0 0 0 / 60%);
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+}
+.about span {
+  display: block;
+}
+.about-me {
+  flex: 1;
+}
+.about h1 {
+  color: #4f4f4f;
+  font-weight: normal;
+}
+.about p {
+  color: #4f4f4f;
+}
+.bio {
+  flex: 1;
+}
+
+.bio .info {
+  display: flex;
+  justify-content: space-between;
+}
+.info .my-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.bio h3 {
+  color: #4f4f4f;
+}
+.bio i {
+  color: #918b8b;
+  font-size: 20px;
+}
+.data {
+  padding-right: 20px;
+  width: 50%;
+  text-align: start;
+  color: #4f4f4f;
+}
+/***********************************************/
+
+.eduction {
+  margin-bottom: var(--sections-pd--);
+  padding: 40px;
+  box-shadow: 0px 4px 12px 0px rgb(0 0 0 / 20%),
+    0px 2px 4px 1px rgb(0 0 0 / 60%);
+}
+.eduction h1 {
+  color: #4f4f4f;
+  font-weight: normal;
+}
+
+.education-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .education-container {
+    flex-direction: column;
+  }
+}
+.eduction-data {
+  position: relative;
+  flex: 1;
+}
+.eduction-data h2::before {
+  content: '';
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: -13px;
+  top: 23px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #4f4f4f;
+}
+
+.eduction-data h2 {
+  color: #4f4f4f;
+}
+
+.eduction-data span {
+  color: #757575;
+}
+.uni-image {
+  flex: 1;
+}
+.uni-image img {
+  max-width: 100%;
+}
+@media (max-width: 576px) {
+  .uni-image img {
+    display: none;
+  }
+}
+
+/***********************/
+.work {
+  margin-bottom: var(--sections-pd--);
+  padding: 40px;
+  box-shadow: 0px 4px 12px 0px rgb(0 0 0 / 20%),
+    0px 2px 4px 1px rgb(0 0 0 / 60%);
+}
+.work h1 {
+  color: #4f4f4f;
+  font-weight: normal;
+}
+.first {
+  margin: 30px;
+  position: relative;
+  padding-left: 20px;
+}
+.first::before {
+  content: '';
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: -13px;
+  top: 23px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #4f4f4f;
+}
+.first::after {
+  content: '';
+  position: absolute;
+  height: 70px;
+  width: 2px;
+  left: -13px;
+  top: 38px;
+  background-color: #e7dede;
+}
+
+.first h2 {
+  color: #4f4f4f;
+}
+.first h2 span {
+  color: #4f4f4f;
+  font-size: 20px;
+  font-weight: 300;
+}
+.first .date {
+  color: #918b8b;
+}

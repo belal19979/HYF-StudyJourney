@@ -1,0 +1,18 @@
+How do I create a hidden file or folder? How do I display it in the CLI?
+
+- for folders or file make folder  with mkdir or file with touch  first , 
+then use command attrib +s +h "folder or file directory such as :D:\test\folder\textfile.txt", 
+to display same command but replace "+" with "-"
+ 
+
+
+2- How do I create multiple nested directories, like /c/Users/myusername/these/folders/are/just/for/fun? 
+
+ - cd c:\Users => mkdir myusername/these/folders/are/just/for/fun
+
+
+3-How do I append a message to a file, without a newline character ?
+
+first: echo first message > file.txt
+second : echo second message >> file.txt
+	

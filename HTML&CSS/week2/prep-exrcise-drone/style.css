@@ -1,0 +1,44 @@
+body {
+  box-sizing: border-box;
+}
+ul {
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+.flexbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flexbox-item {
+  max-width: 300px;
+}
+@media (max-width: 1024px) and (min-width: 600px) {
+  .flexbox-item {
+    flex: 250px;
+  }
+}
+.grid-list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.grid-list:first-child {
+  background-color: red;
+}
+.grid-list:nth-child(3) {
+  background-color: black;
+}
+.grid-list > li:first-child {
+  background-color: red;
+}
+
+@media (min-width: 1200px) {
+  /* .grid-list > li:first-child {
+    grid-column: span 2;
+  } */
+}
